@@ -1,0 +1,47 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html
+{
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+button
+{
+  width: 200px;
+  height: 75px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: x-large;
+  color: yellow;
+  background-color: green;
+}
+button:hover
+{
+  color: red;
+  background-color: black;
+}
+span
+{
+  text-align: center;
+}
+/* On montre le premier texte */
+.textBase{
+   display: inherit;
+}
+/* On cache le second texte */
+.textHover{
+   display: none;
+}
+/* On fait disparaitre le premier texte au passage de la souris. */
+button:hover span.textBase{
+   display: none;
+}
+/* On fait apparaitre le second texte au passage de la souris. */
+button:hover span.textHover{
+   display: inherit;
+}
