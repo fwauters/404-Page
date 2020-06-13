@@ -6,42 +6,90 @@
 }
 html
 {
-  background-color: black;
   color: white;
   text-align: center;
 }
+body
+{
+  background: url("img/spaceBg.jpg") center no-repeat fixed;
+  width: 100%;
+  height: 100%;
+  font-family: 'Space Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+}
+.astronaut
+{
+  position: relative;
+  animation-name: astronaut;
+  animation-duration: 120s;
+  animation-iteration-count: infinite;
+}
+@keyframes astronaut
+{
+  0%   {left:-450px; top:40px;}
+  25%  {left:450px; top:40px;}
+  50%  {left:450px; top:-720px;}
+  75%  {left:-450px; top:-720px;}
+  100% {left:-450px; top:40px;}
+}
+.mainBlock
+{
+  width: 40%;
+  height: 50%;
+  position: relative;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 150px;
+  padding-top: 30px;
+  border-radius: 25px;
+  background-color: rgba(50,50,50,0.50);
+}
+.topText
+{
+  font-size: x-large;
+}
+h1
+{
+  font-size: 1500%;
+}
+.bottomText
+{
+  font-size: x-large;
+}
 button
 {
-  width: 200px;
+  width: 220px;
   height: 75px;
+  margin-top: 55px;
+  margin-bottom: 35px;
   border-radius: 15px;
   text-align: center;
   font-size: x-large;
-  color: yellow;
-  background-color: green;
+  color: white;
+  background-color: #094172;
 }
 button:hover
 {
-  color: red;
-  background-color: black;
+  color: #094172;
+  background-color: white;
 }
 span
 {
   text-align: center;
 }
-/* On montre le premier texte */
-.textBase{
-   display: inherit;
+.textBase
+{
+  display: inherit;
 }
-/* On cache le second texte */
-.textHover{
-   display: none;
+.textHover
+{
+  display: none;
 }
-/* On fait disparaitre le premier texte au passage de la souris. */
-button:hover span.textBase{
-   display: none;
+button:hover span.textBase
+{
+  display: none;
 }
-/* On fait apparaitre le second texte au passage de la souris. */
-button:hover span.textHover{
-   display: inherit;
+button:hover span.textHover
+{
+  display: inherit;
 }
